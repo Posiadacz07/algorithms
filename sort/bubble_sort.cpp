@@ -10,8 +10,8 @@
 #include <vector>
 
 void bubbleSort(std::vector<int> &array) {
-  for (int i = array.size(); i > 0; i--) {
-    for (int j = 0; j < i; j++) {
+  for (int i = 0; i < array.size() - 1; i++) {
+    for (int j = 0; j < array.size() - i - 1; j++) {
       if (array.at(j) > array.at(j + 1)) {
         std::swap(array.at(j), array.at(j + 1));
       }
