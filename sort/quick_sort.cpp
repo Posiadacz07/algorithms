@@ -1,5 +1,5 @@
 /*
- * Example of implemantation and usage of bubble sort algorithm for integers.
+ * Example of implemantation and usage of quick sort algorithm for integers.
  * As an output of the program is given numbers of sorted array.
  *
  * Made by: Posiadacz07
