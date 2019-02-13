@@ -16,7 +16,7 @@ or
 | bubble sort | `DONE`|
 | bucket sort | `DONE`|
 | counting sort | `DONE`|
-| cycle sort | `TO DO` |
+| cycle sort | `DONE` |
 | heap sort | `TO DO` |
 | insertion sort | `DONE`|
 | merge sort | `DONE`|
