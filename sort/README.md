@@ -11,16 +11,16 @@ or
 
 
 ### Sort algorithms to implement:
-|sort name | status|
-|--- | ---|
-| bubble sort | `DONE`|
-| bucket sort | `DONE`|
-| counting sort | `DONE`|
-| cycle sort | `DONE` |
-| heap sort | `TO DO` |
-| insertion sort | `DONE`|
-| merge sort | `DONE`|
-| odd-even sort | `TO DO` |
-| quick sort | `DONE`|
-| radix sort | `DONE`|
-| selection sort | `TO DO`|
+| sort name      | status  |
+| -------------- | ------- |
+| bubble sort    | `DONE`  |
+| bucket sort    | `DONE`  |
+| counting sort  | `DONE`  |
+| cycle sort     | `DONE`  |
+| heap sort      | `DONE`  |
+| insertion sort | `DONE`  |
+| merge sort     | `DONE`  |
+| odd-even sort  | `TO DO` |
+| quick sort     | `DONE`  |
+| radix sort     | `DONE`  |
+| selection sort | `TO DO` |
