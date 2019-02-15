@@ -20,7 +20,7 @@ or
 | heap sort      | `DONE`  |
 | insertion sort | `DONE`  |
 | merge sort     | `DONE`  |
-| odd-even sort  | `TO DO` |
+| odd-even sort  | `DONE`  |
 | quick sort     | `DONE`  |
 | radix sort     | `DONE`  |
 | selection sort | `TO DO` |
