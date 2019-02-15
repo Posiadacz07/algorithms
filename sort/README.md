@@ -23,4 +23,4 @@ or
 | odd-even sort  | `DONE`  |
 | quick sort     | `DONE`  |
 | radix sort     | `DONE`  |
-| selection sort | `TO DO` |
+| selection sort | `DONE`  |
