@@ -6,6 +6,6 @@ All implementation based on the description from book.
 In this moment you can find here C++11 implementation of algorithms.
 Every file was created due to my self development.
 
-Every directory have their own description.
+Every directory with implementation have their own description.
 
 Enjoy! 
