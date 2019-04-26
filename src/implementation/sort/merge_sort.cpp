@@ -1,14 +1,12 @@
-/*
- * Example of implemantation and usage of marge sort algorithm for integers.
- * As an output of the program is given numbers of sorted array.
- *
- * Made by: Posiadacz07
- */
+// Example of implemantation of marge sort algorithm for integers.
+//
+// Made by: Posiadacz07
 
 #include <vector>
 
 namespace sort {
 
+//! NOTE: helper function for marge sort
 void merge(std::vector<int> &array, int startIndex, int middleIndex,
            int endIndex) {
   std::vector<int> tmp(array);
