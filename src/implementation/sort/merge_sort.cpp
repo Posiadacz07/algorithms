@@ -5,8 +5,9 @@
  * Made by: Posiadacz07
  */
 
-#include <iostream>
 #include <vector>
+
+namespace sort {
 
 void merge(std::vector<int> &array, int startIndex, int middleIndex,
            int endIndex) {
@@ -34,16 +35,4 @@ void mergeSort(std::vector<int> &array, int startIndex, int endIndex) {
   }
 }
 
-int main() {
-  std::vector<int> array = {30, 29, 28, 27, 26, 25, 1,  2,  3,  4,
-                            5,  6,  7,  24, 23, 22, 21, 20, 19, 18,
-                            8,  9,  10, 11, 17, 16, 15, 13, 14, 12};
-
-  mergeSort(array, 0, array.size() - 1);
-
-  for (int i : array) {
-    std::cout << i << ' ';
-  }
-
-  return 0;
-}
+} // namespace sort

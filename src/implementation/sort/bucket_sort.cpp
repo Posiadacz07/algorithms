@@ -5,8 +5,9 @@
  * Made by: Posiadacz07
  */
 
-#include <iostream>
 #include <vector>
+
+namespace sort {
 
 void bucketSort(std::vector<int> &array) {
   int minValue = array.at(0);
@@ -15,8 +16,7 @@ void bucketSort(std::vector<int> &array) {
   for (int i : array) {
     if (i > maxValue) {
       maxValue = i;
-    }
-    else if (i < minValue) {
+    } else if (i < minValue) {
       minValue = i;
     }
   }
@@ -25,7 +25,7 @@ void bucketSort(std::vector<int> &array) {
   std::vector<std::vector<int>> bucket;
   bucket.resize(bucketLength);
 
-  for (auto& i : bucket) {
+  for (auto &i : bucket) {
     i = std::vector<int>();
   }
 
@@ -34,7 +34,7 @@ void bucketSort(std::vector<int> &array) {
   }
 
   int k = 0;
-  for (const auto& i : bucket) {
+  for (const auto &i : bucket) {
     int bucketSize = i.size();
     if (bucketSize > 0) {
       for (int j = 0; j < bucketSize; j++, k++) {
@@ -44,15 +44,4 @@ void bucketSort(std::vector<int> &array) {
   }
 }
 
-int main() {
-  std::vector<int> array = {30, 29, 28, 27, 26, 25, 1,  2,  3,  4,
-                            5,  6,  7,  24, 23, 22, 21, 20, 19, 18,
-                            8,  9,  10, 11, 17, 16, 15, 13, 14, 12};
-
-  bucketSort(array);
-
-  for (int i : array) {
-    std::cout << i << ' ';
-  }
-  return 0;
-}
+} // namespace sort
