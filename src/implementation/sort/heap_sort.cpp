@@ -1,16 +1,13 @@
-/*
- * Example of implemantation and usage of heap sort algorithm for integers.
- * As an output of the program is given numbers of sorted array.
- *
- * Made by: Posiadacz07
- */
+// Example of implemantation of heap sort algorithm for integers.
+//
+// Made by: Posiadacz07
 
 #include <algorithm>
 #include <vector>
 
 namespace sort {
 
-// NOTE: helper function for heap sort
+//! NOTE: helper function for heap sort
 void heapify(std::vector<int> &array, int length, int index) {
   int largest = index;
   int leftIndex = 2 * index + 1;

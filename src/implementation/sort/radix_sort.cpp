@@ -1,15 +1,13 @@
-/*
- * Example of implemantation and usage of radix sort algorithm for integers.
- * As an output of the program is given numbers of sorted array.
- *
- * Made by: Posiadacz07
- */
+// Example of implemantation of radix sort algorithm for integers.
+//
+// Made by: Posiadacz07
 
 #include <algorithm>
 #include <vector>
 
 namespace sort {
 
+//! NOTE: helper function for heap sort
 void countSort(std::vector<int> &array, int exp) {
   std::vector<int> result;
   result.resize(array.size());

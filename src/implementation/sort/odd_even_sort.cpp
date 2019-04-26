@@ -1,9 +1,7 @@
-/*
- * Example of implemantation and usage of odd-even sort algorithm for integers.
- * As an output of the program is given numbers of sorted array.
- *
- * Made by: Posiadacz07
- */
+// Example of implemantation of odd-even sort algorithm for integers.
+//
+// Made by: Posiadacz07
+
 
 #include <algorithm>
 #include <vector>
