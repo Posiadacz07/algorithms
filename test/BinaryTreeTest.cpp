@@ -19,9 +19,9 @@ void BinaryTreeTest::TearDown() {}
 // Helper function to set up tree for tests.
 //
 //            7
-//          /   \ 
+//          /   \
 //         3     4
-//        / \     \  
+//        / \     \
 //       2   5     8
 //      / \ 
 //     1   6
