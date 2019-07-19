@@ -12,6 +12,7 @@ add_library(${PROJECT_NAME} STATIC
     implementation/sort/quick_sort.cpp
     implementation/sort/radix_sort.cpp
     implementation/sort/selection_sort.cpp
+    implementation/trees/BinaryTree.cpp
 )
 
 target_include_directories(${PROJECT_NAME} 
