@@ -1,5 +1,5 @@
-#ifndef BINARY_TREE
-#define BINARY_TREE
+#ifndef BINARY_TREE_HPP
+#define BINARY_TREE_HPP
 
 #include <vector>
 
@@ -83,4 +83,4 @@ private:
   Node *rootNode;
 };
 } // namespace trees
-#endif // BINARY_TREE
+#endif // BINARY_TREE_HPP

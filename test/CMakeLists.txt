@@ -11,10 +11,7 @@ MESSAGE( STATUS "Using GMock from: " ${GMOCK_DIR} )
 
 set(IMPLEMENTATION_SOURCES
   # List all implementation files to be built in this project
-<<<<<<< HEAD
   BinaryTreeTest.cpp
-=======
->>>>>>> 6e0c9ae3c26036a45db2722d4ca92daeee83b799
   sortTest.cpp
   testmain.cpp)
 
