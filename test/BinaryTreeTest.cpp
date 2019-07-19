@@ -1,4 +1,4 @@
-#include "src/interface/BinaryTree.hpp"
+#include "../src/interface/BinaryTree.hpp"
 #include "gtest/gtest.h"
 
 #include <vector>
@@ -44,22 +44,22 @@ BinaryTree prepareBinaryTree() {
 TEST_F(BinaryTreeTest, FindNodeInTree) {
   BinaryTree tree = prepareBinaryTree();
   BinaryTree::Node *findedNode = tree.findNode(5);
-  EXPECT_NOT_NULL(findedNode);
+  EXPECT_FALSE(findedNode == nullptr);
   EXPECT_EQ(5, findedNode->getKey());
-  EXPECT_NULL(findedNode->getLeftChild());
-  EXPECT_NULL(findedNode->getRightChild());
+  EXPECT_TRUE(findedNode->getLeftChild() == nullptr);
+  EXPECT_TRUE(findedNode->getRightChild() == nullptr);
 }
 
 TEST_F(BinaryTreeTest, FindNodeWithKeyNotExistingInTree) {
   BinaryTree tree = prepareBinaryTree();
   BinaryTree::Node *findedNode = tree.findNode(100);
-  EXPECT_NULL(findedNode);
+  EXPECT_TRUE(findedNode == nullptr);
 }
 
 TEST_F(BinaryTreeTest, FindNodeInEmptyTree) {
   BinaryTree tree;
   BinaryTree::Node *findedNode = tree.findNode(100);
-  EXPECT_NULL(findedNode);
+  EXPECT_TRUE(findedNode);
 }
 
 TEST_F(BinaryTreeTest, FindAncestorsInTree) {
@@ -104,12 +104,12 @@ TEST_F(BinaryTreeTest, FindLowestCommonAncestorInTreeWithRoot) {
 TEST_F(BinaryTreeTest, FindLowestCommonAncestorInTreeWithNotExistingNode) {
   BinaryTree tree = prepareBinaryTree();
   BinaryTree::Node *firstNode = tree.findNode(100);
-  EXPECT_NULL(firstNode);
+  EXPECT_TRUE(firstNode == nullptr);
   BinaryTree::Node *secondNode = tree.findNode(6);
-  EXPECT_NOT_NULL(secondNode);
+  EXPECT_FALSE(secondNode == nullptr);
   BinaryTree::Node *lowestCommonAncestor =
       tree.lowestCommonAncestor(firstNode, secondNode);
-  EXPECT_NULL(lowestCommonAncestor);
+  EXPECT_TRUE(lowestCommonAncestor == nullptr);
 }
 } // namespace test
 } // namespace trees

@@ -1,5 +1,6 @@
-#include "interface/BinaryTree.hpp"
+#include "../interface/BinaryTree.hpp"
 
+namespace trees {
 int BinaryTree::Node::getKey() const { return key; }
 
 BinaryTree::Node *BinaryTree::Node::getLeftChild() const { return leftChild; }
@@ -139,3 +140,4 @@ BinaryTree::lowestCommonAncestor(BinaryTree::Node *firstNode,
 }
 
 BinaryTree::~BinaryTree() { remove(rootNode); }
+} // namespace trees

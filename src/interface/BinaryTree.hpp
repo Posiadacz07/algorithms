@@ -1,8 +1,9 @@
-#ifndef POSIADACZ07_ASSIGNMENT2_BINARY_TREE
-#define POSIADACZ07_ASSIGNMENT2_BINARY_TREE
+#ifndef BINARY_TREE
+#define BINARY_TREE
 
 #include <vector>
 
+namespace trees {
 //! Binary tree class
 class BinaryTree {
 public:
@@ -81,5 +82,5 @@ public:
 private:
   Node *rootNode;
 };
-
-#endif // POSIADACZ07_ASSIGNMENT2_BINARY_TREE
+} // namespace trees
+#endif // BINARY_TREE
