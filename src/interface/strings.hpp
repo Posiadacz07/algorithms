@@ -4,8 +4,7 @@
 #include <string>
 #include <vector>
 
-namespace strings
-{
+namespace strings {
 
 //! Function to search pattern in string using brute force.
 //! param[in] source  string in which pattern is searched
@@ -17,6 +16,10 @@ std::vector<int> searchPatternBruteForce(std::string source,
 //! Function to search pattern in string using Morris-Pratt algorithm.
 std::vector<int> searchPatternMorrisPratt(std::string source,
                                           std::string pattern);
+
+//! Function to search pattern in string using Karp-Rabin algorithm.
+std::vector<int> searchPatternKarpRabin(std::string source,
+                                        std::string pattern);
 } // namespace strings
 
 #endif // STRINGS_HPP
