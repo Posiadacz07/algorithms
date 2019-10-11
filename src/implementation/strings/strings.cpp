@@ -10,7 +10,7 @@ namespace strings
 //! Some how sanity chaeck.
 //! param[in] source  string in which pattern is searched
 //! param[in] pattern string to search in source
-//! returns   true if source and pattern are valid, false otherwise.
+//! returns   true if source and pattern are valid, false otherwise
 bool checkValidityOfSourceAndPattern(std::string source, std::string pattern)
 {
   return source != "" && pattern != "" && pattern.length() <= source.length();
@@ -20,7 +20,7 @@ bool checkValidityOfSourceAndPattern(std::string source, std::string pattern)
 //! param[in] source               string in which pattern is searched
 //! param[in] pattern              string to search in source
 //! param[in] currentIndexOfSource index in source string where pattern search starts
-//! retruns   true if pattern is found at given index, false otherwise.
+//! retruns   true if pattern is found at given index, false otherwise
 bool checkPatternFound(const std::string &source,
                        const std::string &pattern,
                        int currentIndexOfSource)
@@ -69,17 +69,17 @@ std::vector<int> generateMaxPrefixBorders(std::string pattern)
   }
   std::vector<int> result;
   result.reserve(pattern.length() + 1);
-  result.at(0) = -1;
+  result[0] = -1;
   int border = -1;
 
-  for (int i = 0; i < pattern.length(); i++)
+  for (int i = 1; i <= pattern.length(); i++)
   {
-    while (border > -1 && pattern[border] != pattern[i])
+    while (border > -1 && pattern[border] != pattern[i - 1])
     {
-      border = result.at(border);
+      border = result[border];
     }
     border++;
-    result.at(i) = border;
+    result[i] = border;
   }
   return result;
 }
@@ -123,6 +123,8 @@ std::vector<int> searchPatternMorrisPratt(std::string source,
 
 //! Helper function to calculate hash for Karp-Rabin algorithm.
 //! Hash is the sum of the all letters in ASCII.
+//! param[in] word string to calculate hash
+//! returns   calculated hash value
 long long calculateHash(std::string word)
 {
   long long result = 0;
