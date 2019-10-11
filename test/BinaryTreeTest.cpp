@@ -59,7 +59,7 @@ TEST_F(BinaryTreeTest, FindNodeWithKeyNotExistingInTree) {
 TEST_F(BinaryTreeTest, FindNodeInEmptyTree) {
   BinaryTree tree;
   BinaryTree::Node *findedNode = tree.findNode(100);
-  EXPECT_TRUE(findedNode);
+  EXPECT_FALSE(findedNode);
 }
 
 TEST_F(BinaryTreeTest, FindAncestorsInTree) {

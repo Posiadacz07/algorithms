@@ -13,6 +13,7 @@ set(IMPLEMENTATION_SOURCES
   # List all implementation files to be built in this project
   BinaryTreeTest.cpp
   sortTest.cpp
+  stringTest.cpp
   testmain.cpp)
 
 include_directories(
