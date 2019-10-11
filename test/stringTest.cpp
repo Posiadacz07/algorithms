@@ -31,6 +31,7 @@ TEST_F(stringTest, emptySource)
     EXPECT_EQ(expectedEmptyVector, searchPatternBruteForce("", pattern));
     EXPECT_EQ(expectedEmptyVector, searchPatternMorrisPratt("", pattern));
     EXPECT_EQ(expectedEmptyVector, searchPatternKarpRabin("", pattern));
+    EXPECT_EQ(expectedEmptyVector, searchPatternBoyerMoore("", pattern));
 }
 
 TEST_F(stringTest, emptyPattern)
@@ -39,6 +40,7 @@ TEST_F(stringTest, emptyPattern)
     EXPECT_EQ(expectedEmptyVector, searchPatternBruteForce(source, ""));
     EXPECT_EQ(expectedEmptyVector, searchPatternMorrisPratt(source, ""));
     EXPECT_EQ(expectedEmptyVector, searchPatternKarpRabin(source, ""));
+    EXPECT_EQ(expectedEmptyVector, searchPatternBoyerMoore(source, ""));
 }
 
 TEST_F(stringTest, searchPatternUsingBruteForceAlgorithm)
@@ -54,6 +56,11 @@ TEST_F(stringTest, searchPatternUsingMorrisPrattAlgorithm)
 TEST_F(stringTest, searchPatternUsingKarpRabinAlgorithm)
 {
     EXPECT_EQ(result, searchPatternKarpRabin(source, pattern));
+}
+
+TEST_F(stringTest, searchPatternUsingBoyerMooreAlgorithm)
+{
+    EXPECT_EQ(result, searchPatternBoyerMoore(source, pattern));
 }
 
 } //namespace test

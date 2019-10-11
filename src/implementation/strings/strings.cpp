@@ -1,5 +1,6 @@
 #include "../interface/strings.hpp"
 
+#include <map>
 #include <string>
 #include <vector>
 
@@ -165,6 +166,45 @@ std::vector<int> searchPatternKarpRabin(std::string source,
     if (i + pattern.length() - 1 < source.length())
     {
       sourceHash = calculateHash(source.substr(i, pattern.length()));
+    }
+  }
+  return result;
+}
+
+std::vector<int> searchPatternBoyerMoore(std::string source,
+                                         std::string pattern)
+{
+  std::vector<int> result;
+  if (!checkValidityOfSourceAndPattern(source, pattern))
+  {
+    return result;
+  }
+
+  std::map<char, int> last;
+  for (int i = 0; i < pattern.length(); i++)
+  {
+    last[pattern[i]] = i;
+  }
+
+  int i = 0;
+  while (i <= source.length() - pattern.length())
+  {
+    int j = pattern.length() - 1;
+    while (j > -1 && pattern[j] == source[j + i])
+    {
+      j--;
+    }
+
+    if (j == -1)
+    {
+      result.push_back(i);
+      i++;
+    }
+    else
+    {
+      i = last.find(source[i + j]) != last.end()
+              ? i + std::max(1, j - last.at(source[i + j]))
+              : i + 1;
     }
   }
   return result;
